@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.demo.client.controller.OrderController">
+
+    <!-- TOP -->
+    <top>
+        <VBox spacing="10" style="-fx-padding:10;">
+
+            <Label text="POS QUẢN LÝ BÁN HÀNG"
+                   style="-fx-font-size:20px; -fx-font-weight:bold;" />
+
+            <HBox spacing="10">
+
+                <TextField fx:id="txtEmployeeId"
+                           promptText="Mã nhân viên"/>
+
+                <Button text="Thanh toán"
+                        onAction="#checkout"/>
+
+            </HBox>
+
+            <HBox spacing="10">
+
+                <TextField fx:id="txtSearch"
+                           promptText="Tìm sản phẩm"/>
+
+                <Button text="Tìm"
+                        onAction="#searchProduct"/>
+
+            </HBox>
+
+        </VBox>
+    </top>
+
+    <!-- CENTER -->
+    <center>
+        <SplitPane dividerPositions="0.5">
+
+            <!-- PRODUCT LIST -->
+            <VBox spacing="5" style="-fx-padding:10;">
+                <Label text="SẢN PHẨM"/>
+
+                <TableView fx:id="tableProduct">
+
+                    <columns>
+                        <TableColumn fx:id="colProductId" text="ID"/>
+                        <TableColumn fx:id="colProductName" text="Tên"/>
+                        <TableColumn fx:id="colProductPrice" text="Giá"/>
+                        <TableColumn fx:id="colProductStock" text="Tồn"/>
+                    </columns>
+
+                </TableView>
+
+                <Button text="Thêm vào giỏ"
+                        onAction="#addToCart"/>
+            </VBox>
+
+            <!-- CART -->
+            <VBox spacing="5" style="-fx-padding:10;">
+                <Label text="GIỎ HÀNG"/>
+
+                <TableView fx:id="tableCart">
+
+                    <columns>
+                        <TableColumn fx:id="colCartName" text="Tên"/>
+                        <TableColumn fx:id="colCartQty" text="SL"/>
+                        <TableColumn fx:id="colCartPrice" text="Giá"/>
+                        <TableColumn fx:id="colCartTotal" text="Tổng"/>
+                    </columns>
+
+                </TableView>
+
+                <HBox spacing="10">
+                    <Label text="TỔNG TIỀN:"/>
+                    <Label fx:id="lblTotal" text="0"/>
+                </HBox>
+
+                <Button text="Xóa khỏi giỏ"
+                        onAction="#removeCartItem"/>
+            </VBox>
+
+        </SplitPane>
+    </center>
+
+</BorderPane>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.demo.client.controller.IngredientController">
+
+    <top>
+
+        <VBox spacing="10" style="-fx-padding:10;">
+
+            <Label text="QUẢN LÝ NGUYÊN LIỆU"
+                   style="-fx-font-size:20px;
+                          -fx-font-weight:bold;"/>
+
+            <HBox spacing="10">
+
+                <TextField fx:id="txtId"
+                           promptText="Mã nguyên liệu"
+                           editable="false"/>
+
+                <TextField fx:id="txtName"
+                           promptText="Tên nguyên liệu"/>
+
+                <TextField fx:id="txtUnit"
+                           promptText="Đơn vị"/>
+
+            </HBox>
+
+            <HBox spacing="10">
+
+                <TextField fx:id="txtQuantity"
+                           promptText="Số lượng"/>
+
+                <TextField fx:id="txtImportPrice"
+                           promptText="Giá nhập"/>
+
+            </HBox>
+
+            <HBox spacing="10">
+
+                <Button text="Thêm"
+                        onAction="#addIngredient"/>
+
+                <Button text="Sửa"
+                        onAction="#updateIngredient"/>
+
+                <Button text="Xóa"
+                        onAction="#deleteIngredient"/>
+
+                <Button text="Làm mới"
+                        onAction="#refreshForm"/>
+
+                <Region HBox.hgrow="ALWAYS"/>
+
+                <TextField fx:id="txtSearch"
+                           promptText="Tìm nguyên liệu"/>
+
+                <Button text="Tìm"
+                        onAction="#searchIngredient"/>
+
+            </HBox>
+
+        </VBox>
+
+    </top>
+
+    <center>
+
+        <TableView fx:id="tableIngredient">
+
+            <columns>
+
+                <TableColumn fx:id="colId"
+                             text="ID"
+                             prefWidth="80"/>
+
+                <TableColumn fx:id="colName"
+                             text="Tên nguyên liệu"
+                             prefWidth="250"/>
+
+                <TableColumn fx:id="colUnit"
+                             text="Đơn vị"
+                             prefWidth="120"/>
+
+                <TableColumn fx:id="colQuantity"
+                             text="Số lượng"
+                             prefWidth="120"/>
+
+                <TableColumn fx:id="colImportPrice"
+                             text="Giá nhập"
+                             prefWidth="150"/>
+
+            </columns>
+
+        </TableView>
+
+    </center>
+
+</BorderPane>

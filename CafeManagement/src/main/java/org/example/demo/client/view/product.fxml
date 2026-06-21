@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.demo.client.controller.ProductController">
+
+    <top>
+
+        <VBox spacing="10" style="-fx-padding:10;">
+
+            <Label text="QUẢN LÝ SẢN PHẨM"
+                   style="-fx-font-size:20px; -fx-font-weight:bold;" />
+
+            <HBox spacing="10">
+
+                <TextField fx:id="txtId"
+                           promptText="Mã sản phẩm"
+                           editable="false"/>
+
+                <TextField fx:id="txtCode"
+                           promptText="Mã code"/>
+
+                <TextField fx:id="txtName"
+                           promptText="Tên sản phẩm"/>
+
+            </HBox>
+
+            <HBox spacing="10">
+
+                <TextField fx:id="txtPrice"
+                           promptText="Giá bán"/>
+
+                <TextField fx:id="txtCategory"
+                           promptText="Danh mục"/>
+
+                <TextField fx:id="txtStock"
+                           promptText="Tồn kho"/>
+
+            </HBox>
+
+            <HBox spacing="10">
+
+                <Button text="Thêm" onAction="#addProduct"/>
+                <Button text="Sửa" onAction="#updateProduct"/>
+                <Button text="Xóa" onAction="#deleteProduct"/>
+                <Button text="Làm mới" onAction="#refreshForm"/>
+
+                <Region HBox.hgrow="ALWAYS"/>
+
+                <TextField fx:id="txtSearch"
+                           promptText="Tìm kiếm sản phẩm"/>
+
+                <Button text="Tìm" onAction="#searchProduct"/>
+
+            </HBox>
+
+        </VBox>
+
+    </top>
+
+    <center>
+
+        <TableView fx:id="tableProduct">
+
+            <columns>
+
+                <TableColumn fx:id="colId" text="ID"/>
+                <TableColumn fx:id="colCode" text="Mã SP"/>
+                <TableColumn fx:id="colName" text="Tên"/>
+                <TableColumn fx:id="colPrice" text="Giá"/>
+                <TableColumn fx:id="colCategory" text="Danh mục"/>
+                <TableColumn fx:id="colStock" text="Tồn"/>
+
+            </columns>
+
+        </TableView>
+
+    </center>
+
+</BorderPane>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400" prefWidth="600" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demo.client.controller.LoginController">
+
+    <VBox alignment="CENTER" spacing="15" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+      <Pane prefHeight="302.0" prefWidth="548.0">
+         <children>
+
+              <Label layoutX="150.0" layoutY="14.0" style="-fx-font-size:24px;-fx-font-weight:bold;" text="HỆ THỐNG QUẢN LÝ CAFE" />
+
+              <TextField fx:id="txtUsername" layoutX="246.0" layoutY="95.0" prefHeight="30.0" prefWidth="314.0" promptText="Tên đăng nhập" />
+
+              <PasswordField fx:id="txtPassword" layoutX="246.0" layoutY="151.0" prefHeight="30.0" prefWidth="314.0" promptText="Mật khẩu" />
+
+              <Button layoutX="175.0" layoutY="220.0" onAction="#login" prefWidth="250" text="Đăng nhập" />
+            <Label layoutX="46.0" layoutY="95.0" prefHeight="30.0" prefWidth="183.0" text="TÊN ĐĂNG NHẬP">
+               <font>
+                  <Font size="20.0" />
+               </font></Label>
+            <Label layoutX="46.0" layoutY="149.0" prefHeight="25.0" prefWidth="142.0" text="MẬT KHẨU">
+               <font>
+                  <Font size="20.0" />
+               </font></Label>
+         </children>
+      </Pane>
+
+    </VBox>
+
+</AnchorPane>

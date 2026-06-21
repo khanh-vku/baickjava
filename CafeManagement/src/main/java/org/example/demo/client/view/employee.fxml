@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.demo.client.controller.EmployeeController">
+
+    <top>
+
+        <VBox spacing="10" style="-fx-padding:10;">
+
+            <Label text="QUẢN LÝ NHÂN VIÊN"
+                   style="-fx-font-size:20px;
+                          -fx-font-weight:bold;"/>
+
+            <HBox spacing="10">
+
+                <TextField fx:id="txtId"
+                           promptText="Mã NV"
+                           editable="false"/>
+
+                <TextField fx:id="txtName"
+                           promptText="Họ tên"/>
+
+                <TextField fx:id="txtGender"
+                           promptText="Giới tính"/>
+
+            </HBox>
+
+            <HBox spacing="10">
+
+                <TextField fx:id="txtPhone"
+                           promptText="Số điện thoại"/>
+
+                <TextField fx:id="txtAddress"
+                           promptText="Địa chỉ"/>
+
+            </HBox>
+
+            <HBox spacing="10">
+
+                <TextField fx:id="txtPosition"
+                           promptText="Chức vụ"/>
+
+                <TextField fx:id="txtSalary"
+                           promptText="Lương"/>
+
+            </HBox>
+
+            <HBox spacing="10">
+
+                <Button text="Thêm"
+                        onAction="#addEmployee"/>
+
+                <Button text="Sửa"
+                        onAction="#updateEmployee"/>
+
+                <Button text="Xóa"
+                        onAction="#deleteEmployee"/>
+
+                <Button text="Làm mới"
+                        onAction="#refreshForm"/>
+
+                <Region HBox.hgrow="ALWAYS"/>
+
+                <TextField fx:id="txtSearch"
+                           promptText="Tìm kiếm nhân viên"/>
+
+                <Button text="Tìm"
+                        onAction="#searchEmployee"/>
+
+            </HBox>
+
+        </VBox>
+
+    </top>
+
+    <center>
+
+        <TableView fx:id="tableEmployee">
+
+            <columns>
+
+                <TableColumn fx:id="colId"
+                             text="Mã NV"
+                             prefWidth="80"/>
+
+                <TableColumn fx:id="colName"
+                             text="Họ tên"
+                             prefWidth="180"/>
+
+                <TableColumn fx:id="colGender"
+                             text="Giới tính"
+                             prefWidth="100"/>
+
+                <TableColumn fx:id="colPhone"
+                             text="SĐT"
+                             prefWidth="130"/>
+
+                <TableColumn fx:id="colAddress"
+                             text="Địa chỉ"
+                             prefWidth="200"/>
+
+                <TableColumn fx:id="colPosition"
+                             text="Chức vụ"
+                             prefWidth="120"/>
+
+                <TableColumn fx:id="colSalary"
+                             text="Lương"
+                             prefWidth="120"/>
+
+            </columns>
+
+        </TableView>
+
+    </center>
+
+</BorderPane>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.demo.client.controller.UserController">
+
+    <top>
+
+        <VBox spacing="10"
+              style="-fx-padding:10;">
+
+            <HBox spacing="10">
+
+                <TextField fx:id="txtUsername"
+                           promptText="Username"/>
+
+                <PasswordField fx:id="txtPassword"
+                               promptText="Password"/>
+
+                <ComboBox fx:id="cboRole"/>
+
+                <TextField fx:id="txtEmployeeId"
+                           promptText="Employee ID"/>
+
+            </HBox>
+
+            <HBox spacing="10">
+
+                <Button text="Thêm"
+                        onAction="#addUser"/>
+
+                <Button text="Sửa"
+                        onAction="#updateUser"/>
+
+                <Button text="Xóa"
+                        onAction="#deleteUser"/>
+
+                <TextField fx:id="txtSearch"
+                           promptText="Tìm kiếm"/>
+
+                <Button text="Tìm"
+                        onAction="#searchUser"/>
+
+            </HBox>
+
+        </VBox>
+
+    </top>
+
+    <center>
+
+        <TableView fx:id="tableUser">
+
+            <columns>
+
+                <TableColumn fx:id="colId"
+                             text="ID"/>
+
+                <TableColumn fx:id="colUsername"
+                             text="Username"/>
+
+                <TableColumn fx:id="colRole"
+                             text="Role"/>
+
+            </columns>
+
+        </TableView>
+
+    </center>
+
+</BorderPane>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.demo.client.controller.MainController">
+
+    <top>
+
+        <HBox prefHeight="70"
+              style="-fx-background-color:#5A2D0C;">
+
+            <Label text="Cafe Management"
+                   style="-fx-text-fill:white;
+                          -fx-font-size:24px;"
+                   HBox.hgrow="ALWAYS"/>
+
+        </HBox>
+
+    </top>
+
+    <left>
+
+        <VBox prefWidth="220"
+              spacing="10"
+              style="-fx-background-color:#A86A3C;
+                     -fx-padding:10;">
+
+            <Button text="Trang Chủ"
+                    onAction="#openDashboard"/>
+
+            <Button text="Tài Khoản"
+                    onAction="#openUser"/>
+
+            <Button text="Nhân Viên"
+                    onAction="#openEmployee"/>
+
+            <Button text="Sản Phẩm"
+                    onAction="#openProduct"/>
+
+            <Button text="Nguyên Liệu"
+                    onAction="#openIngredient"/>
+
+            <Button text="Hóa Đơn"
+                    onAction="#openOrder"/>
+
+        </VBox>
+
+    </left>
+
+    <center>
+
+        <StackPane fx:id="contentPane"/>
+
+    </center>
+
+</BorderPane>
